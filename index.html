@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Quỹ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quản Lý Quỹ</h1>
+        <nav>
+            <a href="index.html">Trang Chủ</a>
+            <a href="rules.html">Nội Quy</a>
+            <a href="members.html" class="active">Thành Viên</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Quản Lý Quỹ</h1>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Họ tên">
+            <input type="date" id="date">
+            <input type="text" id="description" placeholder="Mô tả">
+            <input type="number" id="amount" placeholder="Số tiền" step="1">
+            <button onclick="addTransaction()">Thêm</button>
+        </div>
+        <div class="table-container">
+            <table id="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>Ngày</th>
+                        <th>Mô tả</th>
+                        <th>Số tiền</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="summary">
+            <h2>Tổng Quỹ: <span id="total-amount">0đ</span></h2>
+        </div>
+    </div>
+    <p style="font-size: 50px; color: red;"><br> web lỏ lúc mi load thì mất tổng nma hắn vẫn đang tính á nên đừng lo, cứ
+        <br>nhập tiền thêm vô hay xóa đi là vẫn + á do ta quên chỉnh code <br>
+      <br>  bấm thì bấm 5000 chớ đừng bấm 5.000 hì hắn ra 5đ đó<br>
+    </p>
+    <script src="quy.js"></script>
+</body>
+
+</html>
